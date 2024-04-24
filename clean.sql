@@ -150,19 +150,19 @@ SELECT
   CASE 
           WHEN beds IS NULL THEN max_beds 
           ELSE beds 
-      END AS beds_new,
+      END AS beds,
 	CASE 
           WHEN baths IS NULL THEN max_baths 
           ELSE baths
-      END AS baths_new,
+      END AS baths,
 	CASE 
           WHEN sqft IS NULL THEN max_sqft
           ELSE sqft
-      END AS sqft_new,
+      END AS sqft,
   CASE 
           WHEN list_price IS NULL THEN list_price_min
           ELSE sqft
-      END AS price_new,
+      END AS list_price,
   sold_price,
   lot_sqft,
   list_date,
@@ -229,8 +229,8 @@ SET
 INSERT INTO raw_data_backup  
 SELECT * FROM raw_data;
 
-DROP new_rent_data2;
-DROP non_json2;
-DROP newjson2
+DROP TABLE new_rent_data2;
+DROP TABLE non_json2;
+DROP TABLE newjson2
 
 DELETE FROM raw_data;
