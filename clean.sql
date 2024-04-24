@@ -163,7 +163,7 @@ SELECT
           WHEN list_price IS NULL THEN list_price_min
           ELSE sqft
       END AS list_price,
-  sold_price,
+	property_id,
   lot_sqft,
   list_date,
   garage,
@@ -186,7 +186,7 @@ INSERT INTO clean_table_testing (
     year_built,
     sqft,
     list_price,
-    sold_price,
+		property_id,
     lot_sqft,
     list_date,
     garage,
@@ -205,8 +205,8 @@ SELECT
   year_built::int,
   sqft::int,
   list_price::int,
-  sold_price::int,
-  lot_sqft::int,
+  lot_sqft::text,
+  property_id::text,
   list_date::DATE,
   garage::INT,
   stories::INT,
