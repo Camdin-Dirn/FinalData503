@@ -198,23 +198,23 @@ INSERT INTO clean_table_testing (
     lat
 )
 SELECT 
-	street_num_suff_name::text,
-  beds::int,
-  baths::int,
-  type::text,
-  year_built::int,
-  sqft::int,
-  list_price::int,
-  lot_sqft::text,
-  property_id::text,
-  list_date::DATE,
-  garage::INT,
-  stories::INT,
-  city::text,
-  state::text,
-  zip_code::text,
-  lon::text,
-  lat::text
+		street_num_suff_name,
+  	beds,
+    baths,
+    type,
+    year_built,
+    sqft,
+    list_price,
+		property_id,
+    lot_sqft,
+    list_date,
+    garage,
+    stories,
+  	city,
+    state,
+    zip_code,
+    lon,
+    lat
 FROM new_rent_data2
 ON CONFLICT (street_num_suff_name) DO UPDATE 
 SET 
