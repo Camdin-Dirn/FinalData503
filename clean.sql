@@ -233,4 +233,4 @@ DROP TABLE new_rent_data2;
 DROP TABLE non_json2;
 DROP TABLE newjson2
 
-DELETE FROM raw_data;
+TRUNCATE TABLE raw_data;
