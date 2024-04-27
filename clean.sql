@@ -231,6 +231,6 @@ SELECT * FROM raw_data;
 
 DROP TABLE new_rent_data2;
 DROP TABLE non_json2;
-DROP TABLE newjson2
+DROP TABLE newjson2;
 
 TRUNCATE TABLE raw_data;
